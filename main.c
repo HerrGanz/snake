@@ -278,7 +278,7 @@ int main()
             if (death) DrawText("      YOU ARE DEAD !!!  =(\n Press R to restart the game", 170, 170, 30, RED);
 
             // Update();
-        
+            Print_Direction(key);
         EndDrawing();
         //--------------------------------------------------------------------------
                     
