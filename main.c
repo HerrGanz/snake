@@ -22,7 +22,6 @@
 #include "raylib.h"
 
 int main()
-
 {
     // Initialization
     //--------------------------------------------------------------------------------------
@@ -43,13 +42,6 @@ int main()
     Vector3 cubePosition = { 0 };
 
     SetTargetFPS(60);         // Set our game to run at 60 frames-per-second
-    
-    int direction = 1;
-    direction = 2;
-
-
-    
-
    
     //--------------------------------------------------------------------------------------
 
@@ -96,9 +88,3 @@ int main()
     return 0;
 }
 
-int function() {
-
-    
-
-    return 2;
-}
