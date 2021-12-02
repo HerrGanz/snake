@@ -21,19 +21,20 @@
 
 #include "raylib.h"
 
-int main() 
+int main()
+
 {
     // Initialization
     //--------------------------------------------------------------------------------------
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+    const int screenWidth = 1280;
+    const int screenHeight = 720;
 
     InitWindow(screenWidth, screenHeight, "raylib");
 
     Camera camera = { 0 };
-    camera.position = (Vector3){ 0.0f, 20.0f, 0.01f };
+    camera.position = (Vector3){ 0.0f, 40.0f, 0.01f };
     camera.target = (Vector3){ 0.0f, 0.0f, 0.0f };
-    camera.up = (Vector3){ 0.0f, 1.0f, 0.0f };
+    camera.up = (Vector3){ 00.0f, 2.0f, 0.0f };
     camera.fovy = 60.0f;
     camera.projection = CAMERA_PERSPECTIVE;
     
@@ -41,7 +42,15 @@ int main()
 
     Vector3 cubePosition = { 0 };
 
-    SetTargetFPS(60);               // Set our game to run at 60 frames-per-second
+    SetTargetFPS(60);         // Set our game to run at 60 frames-per-second
+    
+    int direction = 1;
+    direction = 2;
+
+
+    
+
+   
     //--------------------------------------------------------------------------------------
 
     // Main game loop
@@ -49,12 +58,12 @@ int main()
     {
         // Update
         //----------------------------------------------------------------------------------
-        if (IsKeyDown(KEY_RIGHT)) cubePosition.x += 0.2f;
-        if (IsKeyDown(KEY_LEFT)) cubePosition.x -= 0.2f;
-        if (IsKeyDown(KEY_UP)) cubePosition.z -= 0.2f;
-        if (IsKeyDown(KEY_DOWN)) cubePosition.z += 0.2f;
-        if (IsKeyDown(KEY_W)) cubePosition.y += 0.2f;
-        if (IsKeyDown(KEY_S)) cubePosition.y -= 0.2f;
+        if (IsKeyDown(KEY_RIGHT)) cubePosition.x += 0.5f;
+        if (IsKeyDown(KEY_LEFT)) cubePosition.x -= 0.5f;
+        if (IsKeyDown(KEY_UP)) cubePosition.z -= 0.5f;
+        if (IsKeyDown(KEY_DOWN)) cubePosition.z += 0.5f;
+        if (IsKeyDown(KEY_W)) cubePosition.y += 0.5f;
+        if (IsKeyDown(KEY_S)) cubePosition.y -= 0.5f;
         //----------------------------------------------------------------------------------
 
         // Draw
@@ -65,13 +74,13 @@ int main()
 
             BeginMode3D(camera);
                 
-                DrawCube(cubePosition, 2.0f, 2.0f, 2.0f, GREEN);
+                DrawCube(cubePosition, 1.0f, 1.0f, 1.0f, GREEN);
                 DrawCubeWires(cubePosition, 2.0f, 2.0f, 2.0f, RED);
-                DrawGrid(40, 2.0f);
+                DrawGrid(20, 2.0f);
 
             EndMode3D();
 
-            DrawText("Snake", 10, 40, 20, DARKGRAY);
+            DrawText("Snake", 610, 10, 20, DARKGRAY);
 
             DrawFPS(10, 10);
 
@@ -85,4 +94,11 @@ int main()
     //--------------------------------------------------------------------------------------
 
     return 0;
+}
+
+int function() {
+
+    
+
+    return 2;
 }

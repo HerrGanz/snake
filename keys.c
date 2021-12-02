@@ -30,10 +30,10 @@ int main(void)
     {
         // Update
         //----------------------------------------------------------------------------------
-        if (IsKeyDown(KEY_RIGHT)) squarePosition.x += 2.0f;
-        if (IsKeyDown(KEY_LEFT)) squarePosition.x -= 2.0f;
-        if (IsKeyDown(KEY_UP)) squarePosition.y -= 2.0f;
-        if (IsKeyDown(KEY_DOWN)) squarePosition.y += 2.0f;
+        if (IsKeyDown(KEY_RIGHT)) squarePosition.x += 0.5f;
+        if (IsKeyDown(KEY_LEFT)) squarePosition.x -= 0.5f;
+        if (IsKeyDown(KEY_UP)) squarePosition.y -= 0.5f;
+        if (IsKeyDown(KEY_DOWN)) squarePosition.y += 0.5f;
         //----------------------------------------------------------------------------------
 
         // Draw
